@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#07152f">
+<title>PE Revision Hub</title>
+<style>
+:root{--bg:#07152f;--panel:#0d2042;--panel2:#102950;--blue:#9bdcff;--blue2:#c8edff;--pink:#ff35d3;--muted:#9ebbd2;--good:#5ff0b0;--bad:#ff8197}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at top right,#123765 0,transparent 40%),var(--bg);color:var(--blue2);font:16px/1.5 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;min-height:100vh}
+button,input{font:inherit}button{cursor:pointer}.shell{max-width:1050px;margin:auto;padding:22px 16px 44px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:24px}.brand{display:flex;align-items:center;gap:12px;font-weight:850;letter-spacing:.2px;font-size:1.2rem}.logo{display:grid;place-items:center;width:44px;height:44px;border:2px solid var(--pink);border-radius:14px;color:var(--blue);box-shadow:0 0 18px #ff35d322;font-size:1.2rem}.chip{border:1px solid var(--pink);border-radius:999px;padding:6px 12px;color:var(--blue);font-size:.82rem;background:#ff35d30c}.card{background:linear-gradient(145deg,#10264a,#0a1a37);border:1px solid #31547a;border-radius:22px;padding:22px;box-shadow:0 14px 38px #0002}.hero{display:flex;justify-content:space-between;align-items:center;gap:22px;margin-bottom:18px}.eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:.74rem;color:var(--pink);font-weight:800}.hero h1{font-size:clamp(1.8rem,5vw,3rem);line-height:1.08;margin:7px 0 10px;color:var(--blue2)}.hero p{color:var(--muted);margin:0;max-width:600px}.hero-mark{font-size:3rem;color:var(--blue);border:2px solid var(--pink);border-radius:25px;padding:16px;box-shadow:0 0 25px #ff35d322;flex-shrink:0}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:18px 0}.stat{padding:15px;border:1px solid #2b5278;border-radius:16px;background:#0b1b37}.stat strong{display:block;font-size:1.55rem;color:var(--blue2)}.stat span{color:var(--muted);font-size:.84rem}.tabs{display:flex;gap:9px;flex-wrap:wrap;margin:18px 0}.tab,.secondary{background:#0b1d3b;border:1px solid var(--pink);color:var(--blue);border-radius:12px;padding:10px 14px;font-weight:750}.tab.active,.primary{background:var(--blue);color:#07152f;border:2px solid var(--pink);box-shadow:0 0 15px #ff35d31a}.primary{border-radius:13px;padding:12px 17px;font-weight:850}.secondary:hover,.tab:hover,.primary:hover{filter:brightness(1.12)}.grid{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}.section-title{font-size:1.15rem;margin:0 0 14px}.category-list{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.category{border:1px solid var(--pink);background:#0a1b37;border-radius:15px;padding:14px;text-align:left;color:var(--blue2);min-height:95px}.category strong{display:block;margin:5px 0}.category small{color:var(--muted)}.category .emoji{font-size:1.35rem}.category:hover{background:#122c52}.muted{color:var(--muted)}.question{font-size:1.2rem;font-weight:800;margin:8px 0 18px}.answer-list{display:grid;gap:10px}.answer{display:flex;align-items:center;gap:12px;text-align:left;background:#0a1b37;border:1.5px solid var(--pink);border-radius:14px;padding:13px;color:var(--blue2);width:100%}.letter{display:grid;place-items:center;width:30px;height:30px;flex-shrink:0;border:1px solid var(--pink);border-radius:9px;color:var(--blue);font-weight:850}.answer.selected{background:#142f55;box-shadow:0 0 0 1px var(--pink)}.answer.correct{border-color:var(--good);background:#0d382f}.answer.wrong{border-color:var(--bad);background:#3a1930}.feedback{margin-top:14px;padding:13px;border-radius:12px;background:#09182f;border:1px solid #31547a}.feedback.good{border-color:var(--good)}.feedback.bad{border-color:var(--bad)}.row{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.row .primary,.row .secondary{margin-top:12px}.progress{height:8px;background:#193555;border-radius:99px;overflow:hidden;margin:12px 0}.progress span{height:100%;display:block;background:linear-gradient(90deg,var(--blue),var(--pink));width:0;transition:width .2s}.hidden{display:none!important}.login-wrap{max-width:430px;margin:7vh auto}.login-wrap h1{margin:8px 0}.field{display:grid;gap:6px;margin:14px 0}.field label{color:var(--blue);font-weight:750}.field input{background:#07152f;color:var(--blue2);border:1px solid var(--pink);border-radius:12px;padding:13px;outline:none}.field input:focus{box-shadow:0 0 0 3px #ff35d333}.note{font-size:.82rem;color:var(--muted)}.footer{text-align:center;color:#7599b7;font-size:.8rem;margin:22px 0 0}.flashcard{min-height:190px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;border:1px solid var(--pink);border-radius:18px;padding:24px;background:#091a36}.flashcard h3{font-size:1.3rem}.pill{font-size:.78rem;border:1px solid #31547a;padding:4px 9px;border-radius:999px;color:var(--muted)}@media(max-width:720px){.hero{align-items:flex-start}.hero-mark{font-size:2rem;padding:12px}.grid{grid-template-columns:1fr}.stats{gap:8px}.stat{padding:12px}.stat strong{font-size:1.3rem}}@media(max-width:420px){.category-list{grid-template-columns:1fr}.hero-mark{display:none}.top{align-items:flex-start}.card{padding:17px}}
+</style>
+</head>
+<body>
+<div class="shell">
+  <div id="loginScreen" class="login-wrap card">
+    <div class="brand"><div class="logo">PE</div><span>PE REVISION HUB</span></div>
+    <p class="eyebrow" style="margin-top:28px">Year 7 & Year 8</p>
+    <h1>Ready to level up?</h1>
+    <p class="muted">Make a local learner profile to save your quiz progress on this device.</p>
+    <form id="loginForm">
+      <div class="field"><label for="username">Your learner name</label><input id="username" maxlength="24" autocomplete="nickname" placeholder="e.g. Alex" required></div>
+      <button class="primary" type="submit" style="width:100%">Enter revision hub →</button>
+    </form>
+    <p class="note">Free to use. This is a device-only demo profile, not a secure online account. Don't enter a password or private information.</p>
+  </div>
+
+  <div id="appScreen" class="hidden">
+    <header class="top">
+      <div class="brand"><div class="logo">PE</div><div>PE REVISION HUB<div class="muted" style="font-size:.78rem;font-weight:500">Year 7 & 8 • Learn. Practise. Improve.</div></div></div>
+      <div class="row"><span class="chip" id="welcomeChip">Welcome</span><button class="secondary" id="switchUser">Switch profile</button></div>
+    </header>
+    <section class="card hero">
+      <div><div class="eyebrow">Your revision space</div><h1>Small steps.<br>Stronger answers.</h1><p>Practise PE knowledge with quick quizzes across fitness tests, football, badminton, handball and written answers.</p></div>
+      <div class="hero-mark">✦</div>
+    </section>
+    <div class="stats">
+      <div class="stat"><strong id="statDone">0</strong><span>Questions answered</span></div>
+      <div class="stat"><strong id="statAccuracy">—</strong><span>Accuracy</span></div>
+      <div class="stat"><strong id="statStreak">0</strong><span>Correct in a row</span></div>
+    </div>
+    <nav class="tabs" aria-label="Revision sections">
+      <button class="tab active" data-view="home">⌂ Dashboard</button>
+      <button class="tab" data-view="quiz">◎ Quick quiz</button>
+      <button class="tab" data-view="flash">▤ Flashcards</button>
+      <button class="tab" data-view="written">✎ Written practice</button>
+    </nav>
+
+    <main id="homeView">
+      <div class="grid">
+        <section class="card"><h2 class="section-title">Choose a topic</h2><div class="category-list">
+          <button class="category" data-topic="Fitness tests"><span class="emoji">⚡</span><strong>Fitness tests</strong><small>Test what each test measures</small></button>
+          <button class="category" data-topic="Football"><span class="emoji">⚽</span><strong>Football</strong><small>Rules, tactics and skills</small></button>
+          <button class="category" data-topic="Badminton"><span class="emoji">🏸</span><strong>Badminton</strong><small>Shots, rules and court play</small></button>
+          <button class="category" data-topic="Handball"><span class="emoji">🤾</span><strong>Handball</strong><small>Rules, positions and tactics</small></button>
+          <button class="category" data-topic="Written answers"><span class="emoji">✍️</span><strong>Written answers</strong><small>Explain and apply PE knowledge</small></button>
+          <button class="category" data-topic="Mixed"><span class="emoji">✦</span><strong>Mixed revision</strong><small>A bit of everything</small></button>
+        </div></section>
+        <section class="card"><h2 class="section-title">Quick start</h2><p class="muted">Do a short set of questions, then review the explanation after each answer.</p><div class="progress"><span id="overallProgress"></span></div><p class="muted" id="progressText">Your progress will appear here.</p><button class="primary" id="startMixed">Start mixed quiz →</button><hr style="border:0;border-top:1px solid #31547a;margin:22px 0"><h3 class="section-title">Revision tip</h3><p class="muted">For written questions, try to use a PE keyword and explain how it helps performance. For example: “communication helps teammates coordinate their movement.”</p></section>
+      </div>
+    </main>
+
+    <main id="quizView" class="hidden">
+      <section class="card">
+        <div class="row" style="justify-content:space-between"><span class="pill" id="quizTopic">Mixed revision</span><span class="muted" id="questionCount">Question 1</span></div>
+        <div class="progress"><span id="quizProgress"></span></div>
+        <div class="question" id="questionText"></div>
+        <div class="answer-list" id="answers"></div>
+        <div id="feedback" class="hidden"></div>
+        <div class="row"><button class="primary" id="checkAnswer" disabled>Check answer</button><button class="secondary hidden" id="nextQuestion">Next question →</button><button class="secondary" id="quitQuiz">Back to dashboard</button></div>
+      </section>
+    </main>
+
+    <main id="flashView" class="hidden">
+      <section class="card"><div class="row" style="justify-content:space-between"><h2 class="section-title">Flashcards</h2><span class="pill" id="flashCount">Card 1</span></div><div class="flashcard" id="flashcard"><p class="eyebrow">Tap reveal to check yourself</p><h3 id="flashQuestion"></h3><p id="flashAnswer" class="hidden"></p></div><div class="row"><button class="primary" id="revealFlash">Reveal answer</button><button class="secondary" id="nextFlash">Next card →</button></div></section>
+    </main>
+
+    <main id="writtenView" class="hidden">
+      <section class="card"><div class="eyebrow">Build full-mark answers</div><h2 class="section-title">Written practice</h2><p class="muted">Write a short answer in your own words. Reveal the checklist to compare your answer; this isn't automatically marked.</p><div class="question" id="writtenQuestion"></div><textarea id="writtenInput" rows="4" style="width:100%;resize:vertical;background:#07152f;color:var(--blue2);border:1.5px solid var(--pink);border-radius:14px;padding:13px;font:inherit" placeholder="Write your answer here…"></textarea><div class="row"><button class="primary" id="showChecklist">Show answer checklist</button><button class="secondary" id="newWritten">New question →</button></div><div id="writtenChecklist" class="feedback hidden"></div></section>
+    </main>
+    <p class="footer">PE Revision Hub • Free local prototype • Progress stays in this browser on this device</p>
+  </div>
+</div>
+<script>
+const bank = [
+{topic:"Fitness tests",q:"Which fitness component does the 30-metre sprint test mainly measure?",opts:["Speed","Flexibility","Balance","Muscular endurance"],a:0,why:"A short sprint measures how quickly you can cover a distance: speed."},
+{topic:"Fitness tests",q:"Which test is commonly used to assess flexibility in the hamstrings and lower back?",opts:["Handgrip dynamometer","Sit-and-reach","Vertical jump","30-metre sprint"],a:1,why:"The sit-and-reach test assesses flexibility, especially around the hamstrings and lower back."},
+{topic:"Fitness tests",q:"What does a standing broad jump mainly assess?",opts:["Explosive leg power","Reaction time","Cardiovascular endurance","Coordination"],a:0,why:"Jumping for distance from a standing start tests explosive power in the legs."},
+{topic:"Fitness tests",q:"Which test could assess balance while standing on one leg?",opts:["Stork stand test","Bleep test","Sit-up test","Illinois agility test"],a:0,why:"The stork stand test assesses static balance."},
+{topic:"Fitness tests",q:"What does the handgrip dynamometer measure?",opts:["Grip strength","Speed","Agility","Aerobic endurance"],a:0,why:"It measures the force produced when squeezing with the hand."},
+{topic:"Fitness tests",q:"Which fitness component is most important for changing direction quickly while staying controlled?",opts:["Agility","Flexibility","Body composition","Static balance"],a:0,why:"Agility is the ability to change direction or body position quickly and with control."},
+{topic:"Fitness tests",q:"Which test could be used to assess muscular endurance in the abdominal muscles?",opts:["Repeated sit-ups in a set time","Standing broad jump","Sit-and-reach","30-metre sprint"],a:0,why:"Repeated sit-ups assess the ability of muscles to keep working over time."},
+{topic:"Fitness tests",q:"What does reaction time describe?",opts:["How quickly you respond to a stimulus","How far you can jump","How long you can exercise","How flexible a joint is"],a:0,why:"Reaction time is the time taken to respond to a signal or stimulus."},
+{topic:"Football",q:"What is the purpose of a football overlap run?",opts:["Run past a teammate into space to offer an attacking option","Stand still to block your goalkeeper","Take every throw-in","Move into an offside position on purpose"],a:0,why:"An overlapping run gives the player with the ball another passing option and can create space."},
+{topic:"Football",q:"When a goal kick is awarded, where is the ball placed to restart play?",opts:["Inside the goal area","On the halfway line","At the nearest corner arc","At the penalty spot"],a:0,why:"The defending team takes the goal kick from within its goal area."},
+{topic:"Football",q:"What is one advantage of using a short pass rather than a long pass?",opts:["It can help keep possession and improve accuracy","It always scores a goal","It means the ball cannot be intercepted","It removes the need to move"],a:0,why:"A short pass can be easier to control and helps teammates maintain possession."},
+{topic:"Football",q:"Why should a player scan the pitch before receiving the ball?",opts:["To spot teammates, opponents and available space","To avoid ever passing forward","To make the ball stop moving","To change the match rules"],a:0,why:"Scanning helps a player make a quicker, better decision before the ball arrives."},
+{topic:"Football",q:"What is the main purpose of a defensive marking system?",opts:["To track or cover opponents and limit their options","To make all players stay in the centre circle","To guarantee a goal","To stop the goalkeeper communicating"],a:0,why:"Marking aims to reduce opponents' time, space and chances to receive or use the ball."},
+{topic:"Football",q:"Which action is a good example of communication during a match?",opts:["Calling for the ball or warning a teammate about an opponent","Keeping every plan secret","Ignoring teammates","Turning away from play"],a:0,why:"Clear, timely communication helps teammates coordinate decisions and movement."},
+{topic:"Football",q:"A teammate is closely marked. What could you do to help?",opts:["Move into free space to offer a passing option","Stand directly behind the defender","Stop paying attention","Ask the referee to change the rules"],a:0,why:"Moving into space gives the player with the ball another safe option."},
+{topic:"Badminton",q:"What is the main purpose of a badminton smash?",opts:["Hit the shuttle steeply and quickly downwards to attack","Send the shuttle gently high to the back","Start every rally with an underarm serve","Keep the shuttle on your own side"],a:0,why:"A smash is an attacking shot hit fast and downwards to put pressure on the opponent."},
+{topic:"Badminton",q:"In badminton, what is a net shot?",opts:["A shot played softly close to the net","A high defensive shot to the back line","A shot that must land outside the court","A type of footwork test"],a:0,why:"A net shot travels just over the net and aims to make the opponent move forwards."},
+{topic:"Badminton",q:"What should you do after playing a shot during a rally?",opts:["Recover to a balanced position ready for the next shot","Stay where you hit it every time","Turn your back to the shuttle","Put your racket down"],a:0,why:"Recovering to a ready position helps you respond to the opponent's next shot."},
+{topic:"Badminton",q:"What is the purpose of footwork in badminton?",opts:["Help you reach the shuttle efficiently and stay balanced","Make the racket heavier","Change the scoring system","Avoid moving around the court"],a:0,why:"Efficient footwork helps players reach shots in time and recover for the next one."},
+{topic:"Badminton",q:"Which grip is commonly used as a basic starting grip for forehand shots?",opts:["Forehand handshake-style grip","Holding the racket by its head","Pinching the strings","Holding it with both hands at the frame"],a:0,why:"The forehand grip is often taught like a relaxed handshake around the racket handle."},
+{topic:"Badminton",q:"Why is it useful to vary the direction and depth of your shots?",opts:["To move the opponent around and create space","To make every shot identical","To stop the rally immediately","To avoid watching the shuttle"],a:0,why:"Changing placement makes it harder for an opponent to anticipate and return shots."},
+{topic:"Badminton",q:"What is a badminton rally?",opts:["A sequence of play from the serve until the shuttle is no longer in play","A warm-up lap","A type of racket grip","A break between games"],a:0,why:"A rally begins with a serve and continues until the point ends."},
+{topic:"Handball",q:"What is the main role of a handball pivot player in attack?",opts:["Work near the opposition defence to create space and receive passes","Only take throw-ins","Stay beside their own goalkeeper throughout","Keep score for the referee"],a:0,why:"A pivot operates close to the defence, using movement and positioning to create openings."},
+{topic:"Handball",q:"Why is a fast change from defence to attack useful in handball?",opts:["It can catch the opposition before they organise their defence","It means players never need to pass","It automatically awards a goal","It removes the need to defend"],a:0,why:"A quick transition can create a temporary numerical or positional advantage."},
+{topic:"Handball",q:"What is one benefit of passing to a teammate who is in space?",opts:["They may have more time to make a good attacking decision","It guarantees the goalkeeper will leave the goal","It ends the match","It makes the ball heavier"],a:0,why:"A teammate in space may be able to receive safely, move forward or create a scoring chance."},
+{topic:"Handball",q:"Which skill helps a handball player receive a fast pass safely?",opts:["Watch the ball and cushion the catch with hands ready","Close your eyes and turn away","Keep hands behind your back","Stand rigid with arms at your sides"],a:0,why:"Watching the ball and giving with the hands helps control the catch."},
+{topic:"Handball",q:"Why do attacking players move without the ball?",opts:["To create passing lanes and open space","To make the ball disappear","To stop teammates passing","To keep every defender in one place"],a:0,why:"Off-the-ball movement can draw defenders away and create useful passing options."},
+{topic:"Handball",q:"What is a useful way for a team to defend together?",opts:["Communicate and shift across to cover space","Each player ignores the others","All players chase only the ball","Leave attackers unmarked deliberately"],a:0,why:"Communication and coordinated movement help the team cover spaces and opponents."},
+{topic:"Written answers",q:"Give one reason teamwork is important in a team sport.",opts:["It helps players coordinate and support each other","It means one player does everything","It removes the need to practise","It guarantees a win"],a:0,why:"Teamwork allows players to share roles, communicate and create opportunities together."},
+{topic:"Written answers",q:"Why is setting a target useful when improving a PE skill?",opts:["It gives you something specific to work towards and review","It guarantees instant success","It means feedback is unnecessary","It stops you practising"],a:0,why:"A clear target helps you focus practice and check whether you are improving."},
+{topic:"Written answers",q:"What is feedback in PE, and how can it help?",opts:["Information about performance that helps identify what to improve","A rule that ends a match","A fitness test for speed","A piece of sports equipment"],a:0,why:"Feedback highlights strengths and areas to improve, helping guide future practice."},
+{topic:"Written answers",q:"Give one example of good sportsmanship.",opts:["Respecting officials and opponents, even when you disagree","Arguing after every decision","Deliberately breaking rules","Refusing to shake hands or acknowledge others"],a:0,why:"Sportsmanship means behaving fairly and respectfully towards teammates, opponents and officials."},
+{topic:"Written answers",q:"Why can goal-setting improve performance?",opts:["It gives practice a clear focus and helps track progress","It replaces all training","It guarantees you will win every game","It makes technique unimportant"],a:0,why:"Goals help athletes focus their effort and review progress over time."}
+];
+const writtenBank=[
+{q:"Explain two ways communication can improve performance in a team sport.",points:["Players can warn teammates about opponents or call for a pass.","Clear communication helps teammates coordinate movement and decisions."]},
+{q:"Describe one benefit of setting a specific target when practising a PE skill.",points:["It gives the player a clear goal to work towards.","Progress can be checked and practice adjusted."]},
+{q:"Explain why recovery to a ready position is important in badminton.",points:["It helps the player stay balanced after a shot.","It makes it easier to move quickly towards the opponent's return."]},
+{q:"Give two ways a football player can help a teammate who has the ball.",points:["Move into space to offer a passing option.","Communicate clearly or make a supportive run."]},
+{q:"Explain how a handball team can create space in attack.",points:["Players move without the ball or change positions.","This can draw defenders away and open passing or shooting lanes."]},
+{q:"Describe the difference between speed and agility.",points:["Speed is how quickly someone moves over a distance.","Agility is changing direction or body position quickly with control."]},
+{q:"Give one example of sportsmanship and explain why it matters.",points:["For example, respecting a referee's decision or helping an opponent up.","It supports fair play and a respectful sporting environment."]},
+{q:"Explain why practising a skill regularly can improve performance.",points:["Practice helps develop technique and consistency.","Feedback and repetition help identify and correct mistakes."]}
+];
+const flashBank=bank.map(x=>({q:x.q,a:x.opts[x.a],topic:x.topic}));
+let profile="",stats={done:0,correct:0,streak:0,bestStreak:0};let selectedTopic="Mixed",quiz=[],qi=0,chosen=null,checked=false,flashIndex=0,writtenIndex=0;
+const $=id=>document.getElementById(id);
+function save(){try{localStorage.setItem("pehub_profile",profile);localStorage.setItem("pehub_stats_"+profile,JSON.stringify(stats))}catch(e){}}
+function load(){try{profile=localStorage.getItem("pehub_profile")||"";stats=JSON.parse(localStorage.getItem("pehub_stats_"+profile)||"null")||{done:0,correct:0,streak:0,bestStreak:0}}catch(e){stats={done:0,correct:0,streak:0,bestStreak:0}}}
+function showApp(){ $("loginScreen").classList.add("hidden");$("appScreen").classList.remove("hidden");$("welcomeChip").textContent="Hi, "+profile+"!";updateStats();showView("home")}
+function updateStats(){$("statDone").textContent=stats.done;$("statAccuracy").textContent=stats.done?Math.round(stats.correct/stats.done*100)+"%":"—";$("statStreak").textContent=stats.streak;$("overallProgress").style.width=Math.min(100,stats.done/40*100)+"%";$("progressText").textContent=stats.done?`You've answered ${stats.done} question${stats.done===1?"":"s"}. Keep practising to build confidence.`:"Answer your first question to start tracking progress."}
+function showView(view){["home","quiz","flash","written"].forEach(v=>$(v+"View").classList.toggle("hidden",v!==view));document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("active",t.dataset.view===view))}
+document.querySelectorAll(".tab").forEach(t=>t.addEventListener("click",()=>{showView(t.dataset.view);if(t.dataset.view==="flash")renderFlash();if(t.dataset.view==="written")renderWritten()}));
+$("loginForm").addEventListener("submit",e=>{e.preventDefault();profile=$("username").value.trim();if(!profile)return;load();save();showApp()});
+$("switchUser").onclick=()=>{$("appScreen").classList.add("hidden");$("loginScreen").classList.remove("hidden");$("username").value=profile};
+document.querySelectorAll("[data-topic]").forEach(b=>b.onclick=()=>startQuiz(b.dataset.topic));
+$("startMixed").onclick=()=>startQuiz("Mixed");$("quitQuiz").onclick=()=>showView("home");
+function startQuiz(topic){selectedTopic=topic;let pool=topic==="Mixed"?[...bank]:bank.filter(q=>q.topic===topic);quiz=pool.sort(()=>Math.random()-.5).slice(0,Math.min(10,pool.length));qi=0;showView("quiz");renderQuestion()}
+function renderQuestion(){chosen=null;checked=false;const q=quiz[qi];$("quizTopic").textContent=q.topic;$("questionCount").textContent=`Question ${qi+1} of ${quiz.length}`;$("quizProgress").style.width=((qi)/quiz.length*100)+"%";$("questionText").textContent=q.q;$("answers").innerHTML="";$("feedback").className="hidden";$("feedback").textContent="";$("checkAnswer").disabled=true;$("checkAnswer").classList.remove("hidden");$("nextQuestion").classList.add("hidden");q.opts.forEach((o,i)=>{let b=document.createElement("button");b.className="answer";b.innerHTML=`<span class="letter">${"ABCD"[i]}</span><span></span>`;b.lastChild.textContent=o;b.onclick=()=>{if(checked)return;chosen=i;document.querySelectorAll(".answer").forEach(x=>x.classList.remove("selected"));b.classList.add("selected");$("checkAnswer").disabled=false};$("answers").appendChild(b)})}
+$("checkAnswer").onclick=()=>{if(chosen===null||checked)return;checked=true;const q=quiz[qi],correct=chosen===q.a;stats.done++;if(correct){stats.correct++;stats.streak++;stats.bestStreak=Math.max(stats.bestStreak,stats.streak)}else stats.streak=0;save();updateStats();document.querySelectorAll(".answer").forEach((b,i)=>{b.disabled=true;if(i===q.a)b.classList.add("correct");if(i===chosen&&i!==q.a)b.classList.add("wrong")});$("feedback").className="feedback "+(correct?"good":"bad");$("feedback").innerHTML=`<strong>${correct?"Correct! Nice work 🎉":"Not quite — keep going."}</strong><br>${q.why}`;$("checkAnswer").classList.add("hidden");$("nextQuestion").classList.remove("hidden");$("nextQuestion").textContent=qi===quiz.length-1?"Finish quiz ✓":"Next question →";$("quizProgress").style.width=((qi+1)/quiz.length*100)+"%"};
+$("nextQuestion").onclick=()=>{if(qi<quiz.length-1){qi++;renderQuestion()}else{showView("home");$("progressText").textContent="Quiz complete! Choose a topic or try a mixed set to keep improving."}};
+function renderFlash(){const c=flashBank[flashIndex%flashBank.length];$("flashCount").textContent=`Card ${flashIndex%flashBank.length+1} of ${flashBank.length}`;$("flashQuestion").textContent=c.q;$("flashAnswer").textContent=c.a;$("flashAnswer").classList.add("hidden");$("revealFlash").textContent="Reveal answer"}
+$("revealFlash").onclick=()=>{$("flashAnswer").classList.remove("hidden");$("revealFlash").textContent="Answer revealed"};$("nextFlash").onclick=()=>{flashIndex=(flashIndex+1)%flashBank.length;renderFlash()};
+function renderWritten(){writtenIndex=writtenIndex%writtenBank.length;const w=writtenBank[writtenIndex];$("writtenQuestion").textContent=w.q;$("writtenInput").value="";$("writtenChecklist").classList.add("hidden");$("writtenChecklist").innerHTML="";$("showChecklist").textContent="Show answer checklist"}
+$("showChecklist").onclick=()=>{const w=writtenBank[writtenIndex];$("writtenChecklist").className="feedback";$("writtenChecklist").innerHTML="<strong>Check your answer includes ideas like:</strong><ul>"+w.points.map(p=>"<li>"+p+"</li>").join("")+"</ul><span class='muted'>These are key points to compare with your own wording, not the only acceptable answers.</span>";$("showChecklist").textContent="Checklist shown"};
+$("newWritten").onclick=()=>{writtenIndex=(writtenIndex+1)%writtenBank.length;renderWritten()};
+load();if(profile){$("username").value=profile;showApp()}
+</script>
+</body>
+</html>
