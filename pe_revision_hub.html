@@ -136,7 +136,7 @@ function showApp(){ $("loginScreen").classList.add("hidden");$("appScreen").clas
 function updateStats(){$("statDone").textContent=stats.done;$("statAccuracy").textContent=stats.done?Math.round(stats.correct/stats.done*100)+"%":"—";$("statStreak").textContent=stats.streak;$("overallProgress").style.width=Math.min(100,stats.done/40*100)+"%";$("progressText").textContent=stats.done?`You've answered ${stats.done} question${stats.done===1?"":"s"}. Keep practising to build confidence.`:"Answer your first question to start tracking progress."}
 function showView(view){["home","quiz","flash","written"].forEach(v=>$(v+"View").classList.toggle("hidden",v!==view));document.querySelectorAll(".tab").forEach(t=>t.classList.toggle("active",t.dataset.view===view))}
 document.querySelectorAll(".tab").forEach(t=>t.addEventListener("click",()=>{showView(t.dataset.view);if(t.dataset.view==="flash")renderFlash();if(t.dataset.view==="written")renderWritten()}));
-$("loginForm").addEventListener("submit",e=>{e.preventDefault();profile=$("username").value.trim();if(!profile)return;load();save();showApp()});
+$("loginForm").addEventListener("submit",e=>{e.preventDefault();const entered=$("username").value.trim();if(!entered)return;profile=entered;try{stats=JSON.parse(localStorage.getItem("pehub_stats_"+profile)||"null")||{done:0,correct:0,streak:0,bestStreak:0}}catch(err){stats={done:0,correct:0,streak:0,bestStreak:0}}save();showApp()});
 $("switchUser").onclick=()=>{$("appScreen").classList.add("hidden");$("loginScreen").classList.remove("hidden");$("username").value=profile};
 document.querySelectorAll("[data-topic]").forEach(b=>b.onclick=()=>startQuiz(b.dataset.topic));
 $("startMixed").onclick=()=>startQuiz("Mixed");$("quitQuiz").onclick=()=>showView("home");
